@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        개발자 도구를 열어서 확인해 보세요.
+    </div>
+    <div th:text="${list}"></div>
+    <div th:text="${map}"></div>
+    <div th:text="${dto}"></div>
+    <script th:inline="javascript">
+
+        const list = [[${list}]];
+        console.log(list);
+
+        const map = [[${map}]];
+        console.log(map);
+
+        const dto = [[${dto}]];
+        console.log(dto);
+
+
+    </script>
+</body>
+</html>

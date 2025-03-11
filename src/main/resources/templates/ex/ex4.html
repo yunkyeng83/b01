@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- jquery 3.6.0 설치 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<p class="hello">안녕</p>
+<p class="hello">안녕</p>
+<p class="hello">안녕</p>
+<button class="test-btn-show">show 버튼</button>
+<button class="test-btn-hide">hide 버튼</button>
+
+<script>
+    // $ 이건 querySelector와 동일하게 사용
+    $('.hello').html('바보');  // .html은 jquery함수(모든 hello클래스 이름)
+
+    // jquery로 css값 변경
+    $('.hello').css('color', 'red');
+
+    $('.hello').addClass('test1');     // <p class="hello test1">
+    $('.hello').removeClass('test1');  // <p class="hello">
+    $('.hello').toggleClass('test1');  // test1이 있으면 -> <p class="hello">
+                                       //         없으면 -> <p class="hello test1">
+
+    $('.hello').eq(2).css('color', 'blue'); //3번째 클래스 이름이 'hello'인 것을 변경
+
+     $('.test-btn-show').on('click', function(){
+        //alert('버튼이 클릭 되었습니다.');
+        //$('.hello').fadeOut();
+        $('.hello').show();
+     });
+
+     $('.test-btn-hide').on('click', function(){
+        //alert('버튼이 클릭 되었습니다.');
+        //$('.hello').fadeOut();
+        $('.hello').hide();
+     });
+
+</script>
+</body>
+</html>
